@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chop Campus Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <script type="module" src="admin.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <header><p class="eyebrow">CHOP CAMPUS</p><h1>Admin portal</h1><p>Sign in with an authorized administrator account to review marketplace listings.</p></header>
+    <section id="auth-panel" class="panel">
+      <h2>Administrator sign in</h2>
+      <form id="login-form">
+        <label>Email <input id="email" type="email" autocomplete="username" required></label>
+        <label>Password <input id="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit">Sign in</button>
+      </form>
+      <p id="auth-message" role="status"></p>
+    </section>
+    <section id="dashboard" class="panel" hidden>
+      <div class="row"><h2>Listings moderation</h2><button id="signout" class="secondary">Sign out</button></div>
+      <p id="dashboard-message" role="status">Loading listings…</p>
+      <div class="table-wrap"><table><thead><tr><th>Listing</th><th>Category</th><th>Price</th><th>Status</th><th>Actions</th></tr></thead><tbody id="listings"></tbody></table></div>
+    </section>
+    <footer>Starter admin portal. Configure trusted admin authorization and RLS before deployment.</footer>
+  </main>
+</body>
+</html>
